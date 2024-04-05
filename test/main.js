@@ -1,12 +1,21 @@
-box = document.querySelector('.box')
-boxx2 = document.querySelector('.box-box')
-boxx31 = document.querySelector('.box-box-box1')
-boxx32 = document.querySelector('.box-box-box2')
-box2 = document.querySelector('.box2')
+const btn = document.querySelector('.btn')
+const box = document.querySelector('.box')
 
-for (let i = 0; i < 3; i++){
-    boxx2.innerHTML+= `
-        <li>${i}</li>
-    `
-}
-console.log(boxx2.parentElement.innerHTML)
+
+btn.addEventListener('click', () => {
+    box.classList.remove('hide')
+    box.classList.add('active2')
+    setTimeout(() => {
+        box.classList.remove('active')
+    },800)
+    let border = box.querySelector('.border')
+    console.log(border)
+    border.classList.add('active')
+    setTimeout(() => {
+        border.classList.remove('active')
+    }, 2000);
+    setTimeout(() => {
+        box.classList.add('hide')
+    },3000)
+    console.log(border)
+})

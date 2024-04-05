@@ -1,0 +1,74 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: no-repeat linear-gradient(to top, #1f1861,#4652c2);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Tahoma, sans-serif;
+    
+}
+li{
+    list-style: none;
+}
+.card{
+    margin: 40px 0;
+    width: 350px;
+    background: #fff;
+    border-radius: 6px;
+}
+#form{
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.7);
+}
+.form-input{
+    border: none;
+    outline: unset;
+    width: 100%;
+    padding: 4px 16px 4px 0;
+}
+.form-btn{
+    padding: 6px 10px;
+    background: #1f1861;
+    color: wheat;
+    border-radius: 4px;
+    outline: unset;
+    border: none;
+    user-select: none;
+    cursor: pointer;
+}
+.todo-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    font-weight: 700;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.deleted{
+    color: #999393;
+    
+}
+.deleted span{
+    text-decoration: line-through;
+}
+span,i{
+    cursor: pointer;
+    user-select: none;
+}
+span{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-right: 20px;
+}
