@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap : 50px;
+    background: #6b57df;
+}
+.card{
+    border-radius: 8px;
+    background: #442ad8;
+    width: 200px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+.card .number{
+    font-size: 40px;
+    margin-top: 20px;
+    font-weight: 700;
+}

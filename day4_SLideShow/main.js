@@ -7,7 +7,7 @@ var innerPrev = document.querySelector('.inner-prev')
 var innerNext = document.querySelector('.inner-next')
 var postionIndex = 0;
 
-showImg = () =>{
+function showImg(){
     if (postionIndex == currentImg.length - 1){
         innerNext.classList.add('hide')
     }else{

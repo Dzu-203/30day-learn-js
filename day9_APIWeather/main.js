@@ -13,7 +13,10 @@ const cardMiddle = document.querySelector('.card-middle')
 
 async function ChangeWeather(inputSearch) {
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${inputSearch}&appid=${apiKey}`
-    let data = await fetch(apiUrl).then(res => res.json())
+    let data = await fetch(apiUrl).then(res => {
+        return res.json()
+    })
+    console.log(data)
     if (data.cod == 200) {
         cardMiddle.classList.remove('hide')
         let currentDay = new Date()
