@@ -1,21 +1,28 @@
-const btn = document.querySelector('.btn')
-const box = document.querySelector('.box')
+function calculate(cells) {
+    const array = [
+        [0,1,2],
+        [3,4,5],
+        [6,7,8],
+        [0,3,6],
+        [1,4,7],
+        [2,5,8],
+        [0,4,8],
+    ];
+    
+    for (let index = 0; index < array.length; index++) {
+        const [a,b,c] = array[index];
+        if (cells[a] && cells[a] === cells[b] && cells[a] === cells[c]){
+            return cells[a];
+        }
+    }
+    return null
+}
 
+arr = [
+    null,null,null,
+    'x','x','x',
+    null,null,null
+]
 
-btn.addEventListener('click', () => {
-    box.classList.remove('hide')
-    box.classList.add('active2')
-    setTimeout(() => {
-        box.classList.remove('active')
-    },800)
-    let border = box.querySelector('.border')
-    console.log(border)
-    border.classList.add('active')
-    setTimeout(() => {
-        border.classList.remove('active')
-    }, 2000);
-    setTimeout(() => {
-        box.classList.add('hide')
-    },3000)
-    console.log(border)
-})
+const a = calculate(arr)
+console.log(a)
